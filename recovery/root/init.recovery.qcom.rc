@@ -39,6 +39,9 @@ on fs
     symlink /dev/block/bootdevice/by-name/mdm_oem_stanvbk /dev/block/bootdevice/by-name/mdm_oem_stanvbk_a
     symlink /dev/block/bootdevice/by-name/mdm_oem_stanvbk /dev/block/bootdevice/by-name/mdm_oem_stanvbk_b
 
+# Set ADB Secure to 0
+    setprop ro.adb.secure 0
+
 service patchfakepartitions-service /system/bin/patchfakepartitions-service.sh
     user root
     group root
